@@ -1,0 +1,111 @@
+//vars 
+$absolute:absolute;
+$relative:relative;
+$mainPageBack:teal;
+$inputsLeftAlgine:20%;
+$width:381.72px;
+$mobile_Result_Numbers_Left :25%;
+.calc{
+    width: 50%;
+    position: $relative;
+    left: 25%;
+    top: 55px;
+    border-radius: 20px;
+    background:$mainPageBack;
+    height: 500px;
+    h3{
+        background: linear-gradient(25deg,crimson,yellow);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        text-align: center;
+        padding-top: 19px;
+    }
+    .numbers{
+        position: $absolute;
+        left: $inputsLeftAlgine;
+        top: 80px;
+    }
+    .result-area{
+        position: $absolute;
+        left: $inputsLeftAlgine;
+        top: 130px;
+        width: $width;
+        .clear{
+            width: 186.67px;
+            border: none;
+            border-radius: 5px;
+            background: darkmagenta;
+            color: white;
+            font-size: 18px;
+        }
+    }
+    input::-webkit-inner-spin-button{
+        -webkit-appearance: none;
+        margin: 0;
+    }
+    input{
+        border-radius: 5px;
+        border: none;
+        outline: none;
+        padding: 2px 5px;
+        color: lightseagreen;
+    }
+    .operations{
+        position: $absolute;
+        top: 180px;
+        left: $inputsLeftAlgine;
+        width: $width;
+        display: grid;
+        grid-template-columns: 20% 20% 20% 20% 20%;
+        row-gap: 15px;
+        button{
+            width: 72.5px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            background: blueviolet;
+            color: white;
+        }
+    }
+}
+//media (mobile)
+@media only screen and (max-width:768px){
+    .calc{
+        width: 96%;
+        top: 20px;
+        left: 8px;
+        .numbers{
+            left: $mobile_Result_Numbers_Left;
+            input{margin-bottom: 10px;}
+        }
+        .result-area{
+            left: $mobile_Result_Numbers_Left;
+            top: 159px;
+            display: grid;
+            width: 195px;
+            input{margin-right: 5px;}
+            .clear{
+                width: 126px;
+                margin-top: 10px;
+                position: absolute;
+                top: 119px;
+                left: 33%;
+            }
+        }
+        .operations{
+            left: 25%;
+            width: 294px;
+            top: 200px;
+            display: grid;
+            grid-template-columns: 22% 22% 22%;
+            button{
+                width: 60.5px;
+                border: none;
+                border-radius: 5px;
+                font-size: 18px;
+                background: blueviolet;
+                color: white;
+            }
+        }
+    }
+}

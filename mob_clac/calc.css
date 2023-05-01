@@ -1,0 +1,122 @@
+.calc {
+  width: 50%;
+  position: relative;
+  left: 25%;
+  top: 55px;
+  border-radius: 20px;
+  background: teal;
+  height: 500px;
+}
+
+.calc h3 {
+  background: linear-gradient(25deg, crimson, yellow);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  text-align: center;
+  padding-top: 19px;
+}
+
+.calc .numbers {
+  position: absolute;
+  left: 20%;
+  top: 80px;
+}
+
+.calc .result-area {
+  position: absolute;
+  left: 20%;
+  top: 130px;
+  width: 381.72px;
+}
+
+.calc .result-area .clear {
+  width: 186.67px;
+  border: none;
+  border-radius: 5px;
+  background: darkmagenta;
+  color: white;
+  font-size: 18px;
+}
+
+.calc input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.calc input {
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  padding: 2px 5px;
+  color: lightseagreen;
+}
+
+.calc .operations {
+  position: absolute;
+  top: 180px;
+  left: 20%;
+  width: 381.72px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 20% 20% 20% 20% 20%;
+      grid-template-columns: 20% 20% 20% 20% 20%;
+  row-gap: 15px;
+}
+
+.calc .operations button {
+  width: 72.5px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  background: blueviolet;
+  color: white;
+}
+
+@media only screen and (max-width: 768px) {
+  .calc {
+    width: 96%;
+    top: 20px;
+    left: 8px;
+  }
+  .calc .numbers {
+    left: 25%;
+  }
+  .calc .numbers input {
+    margin-bottom: 10px;
+  }
+  .calc .result-area {
+    left: 25%;
+    top: 159px;
+    display: -ms-grid;
+    display: grid;
+    width: 195px;
+  }
+  .calc .result-area input {
+    margin-right: 5px;
+  }
+  .calc .result-area .clear {
+    width: 126px;
+    margin-top: 10px;
+    position: absolute;
+    top: 119px;
+    left: 33%;
+  }
+  .calc .operations {
+    left: 25%;
+    width: 294px;
+    top: 200px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 22% 22% 22%;
+        grid-template-columns: 22% 22% 22%;
+  }
+  .calc .operations button {
+    width: 60.5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    background: blueviolet;
+    color: white;
+  }
+}
+/*# sourceMappingURL=calc.css.map */
